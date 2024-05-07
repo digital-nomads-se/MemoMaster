@@ -2,10 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "notecontroller.h"
-#include "notemodel.h"
-#include "notemainwindow.h"
-#include "todomainwindow.h"
+#include "headers/notecontroller.h"
+#include "headers/notemodel.h"
+#include "headers/notemainwindow.h"
+#include "headers/todomainwindow.h"
 
 namespace Ui {
 class MainWindow;

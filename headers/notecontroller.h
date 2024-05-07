@@ -4,11 +4,11 @@
 #include <QObject>
 #include <QInputDialog>
 #include <QStack>
-#include "notemodel.h"
-#include "notemainwindow.h"  // Include the updated MainWindow header
+#include "headers/notemodel.h"
+#include "headers/notemainwindow.h"  // Include the updated MainWindow header
 #include "ui_notemainwindow.h"  // Include the correct UI header
 #include <QFileDialog>
-#include "textfileadapter.h"
+#include "headers/textfileadapter.h"
 
 class NoteController : public QObject {
     Q_OBJECT

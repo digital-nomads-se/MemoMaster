@@ -1,12 +1,12 @@
 // mainwindow.cpp
-#include "mainwindow.h"
+#include "headers/mainwindow.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , todoMain(new TodoMainWindow())
     , noteMain(new NoteMainWindow())
+    , todoMain(new TodoMainWindow())
     , noteModel(new NoteModel())
     , noteController(new NoteController(noteModel, noteMain))
 {

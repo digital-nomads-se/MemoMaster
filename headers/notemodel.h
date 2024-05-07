@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QStringList>
-#include "notememento.h"
+#include "headers/notememento.h"
 
 class NoteModel : public QObject {
     Q_OBJECT

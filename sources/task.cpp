@@ -1,5 +1,5 @@
 
-#include "task.h"
+#include "headers/task.h"
 
 Task::Task(QString description, Priority priority) : desc(description), prio(priority) {}
 

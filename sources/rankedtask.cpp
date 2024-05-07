@@ -1,4 +1,4 @@
-#include "rankedtask.h"
+#include "headers/rankedtask.h"
 
 RankedTask::RankedTask(Task* task, int rank) : task(task), rank(rank) {}
 

@@ -1,7 +1,7 @@
 #ifndef RANKEDTASK_H
 #define RANKEDTASK_H
 
-#include "task.h"
+#include "headers/task.h"
 
 class RankedTask {
 private:

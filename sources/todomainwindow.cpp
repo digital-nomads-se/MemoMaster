@@ -1,9 +1,9 @@
-#include "todomainwindow.h"
+#include "headers/todomainwindow.h"
 #include "ui_todomainwindow.h"
-#include "taskfactory.h"
+#include "headers/taskfactory.h"
 #include <algorithm>
-#include "sortstrategy.h"
-#include "rankedtask.h"
+#include "headers/sortstrategy.h"
+#include "headers/rankedtask.h"
 
 TodoMainWindow::TodoMainWindow(QWidget *parent)
     : QMainWindow(parent)

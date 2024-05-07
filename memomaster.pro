@@ -9,25 +9,25 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 HEADERS += \
-    mainwindow.h \
-    notemainwindow.h \
-    notecontroller.h \
-    notemodel.h \
-    noteview.h \
-    notememento.h \
-    task.h \
-    taskfactory.h \
-    todomainwindow.h \
-    rankedtask.h
+    headers/mainwindow.h \
+    headers/notemainwindow.h \
+    headers/notecontroller.h \
+    headers/notemodel.h \
+    headers/noteview.h \
+    headers/notememento.h \
+    headers/task.h \
+    headers/taskfactory.h \
+    headers/todomainwindow.h \
+    headers/rankedtask.h
 
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp \
-    notemainwindow.cpp \
-    task.cpp \
-    taskfactory.cpp \
-    todomainwindow.cpp \
-    rankedtask.cpp
+    sources/main.cpp \
+    sources/mainwindow.cpp \
+    sources/notemainwindow.cpp \
+    sources/task.cpp \
+    sources/taskfactory.cpp \
+    sources/todomainwindow.cpp \
+    sources/rankedtask.cpp
 
 FORMS += \
     mainwindow.ui \

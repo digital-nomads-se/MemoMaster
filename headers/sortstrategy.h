@@ -2,7 +2,7 @@
 #define SORTSTRATEGY_H
 
 #include <algorithm>
-#include "task.h"
+#include "headers/task.h"
 
 class SortStrategy {
 public:

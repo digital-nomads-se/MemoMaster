@@ -1,4 +1,4 @@
-#include "notemainwindow.h"
+#include "headers/notemainwindow.h"
 #include "ui_notemainwindow.h"
 
 NoteMainWindow::NoteMainWindow(QWidget *parent) :

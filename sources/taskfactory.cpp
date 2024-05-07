@@ -1,5 +1,5 @@
-#include "taskfactory.h"
-#include "taskbuilder.h"
+#include "headers/taskfactory.h"
+#include "headers/taskbuilder.h"
 
 Task* TaskFactory::createTask(const QString& desc, Task::Priority prio) {
     TaskBuilderImpl builder;

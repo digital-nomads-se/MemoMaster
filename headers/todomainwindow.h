@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <QList>
-#include "task.h"
-#include "sortstrategy.h"
+#include "headers/task.h"
+#include "headers/sortstrategy.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TodoMainWindow; }

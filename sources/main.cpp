@@ -1,6 +1,6 @@
-#include "mainwindow.h"
-#include "notemainwindow.h"
-#include "todomainwindow.h"
+#include "headers/mainwindow.h"
+#include "headers/notemainwindow.h"
+#include "headers/todomainwindow.h"
 
 #include <QApplication>
 
