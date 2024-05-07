@@ -1,0 +1,67 @@
+@startuml
+class MainWindow {
+    - noteMain: NoteMainWindow
+    - todoMain: TodoMainWindow
+    - noteModel: NoteModel
+    - noteController: NoteController
+}
+
+class NoteMainWindow {
+    - ui: Ui::NoteMainWindow
+}
+
+class TodoMainWindow {
+    - ui: Ui::TodoMainWindow
+    - model: List<Task*>
+    - sortStrategy: SortStrategy*
+}
+
+class NoteController {
+    - model: NoteModel
+    - view: NoteMainWindow
+    - undoStack: QStack<NoteMemento>
+    - redoStack: QStack<NoteMemento>
+}
+
+class NoteModel {
+    - notes: QStringList
+}
+
+class Task {
+    - desc: QString
+    - prio: Priority
+}
+
+class RankedTask {
+    - task: Task*
+    - rank: int
+}
+
+abstract class SortStrategy {
+    + sort(tasks: List<Task*>): void
+}
+
+class PrioritySort {
+    + sort(tasks: List<Task*>): void
+}
+
+class AlphabeticalSort {
+    + sort(tasks: List<Task*>): void
+}
+
+class TaskFactory {
+    + createTask(desc: QString, prio: Task::Priority): Task
+}
+
+MainWindow "1" *-- "1" NoteMainWindow
+MainWindow "1" *-- "1" TodoMainWindow
+MainWindow "1" *-- "1" NoteController
+NoteController "1" *-- "1" NoteMainWindow
+NoteController "1" *-- "1" NoteModel
+TodoMainWindow "1" *-- "*" Task
+TodoMainWindow "1" *-- "1" SortStrategy
+TaskFactory ..> Task : Creates
+
+note right of PrioritySort : Priority and AlphabeticalSort\nare implementations of SortStrategy
+
+@enduml

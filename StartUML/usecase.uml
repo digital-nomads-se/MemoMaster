@@ -1,0 +1,33 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor User
+package "MemoMaster" {
+  package "Note-Taking Application" {
+      usecase "Add Note" as AddNote
+      usecase "Remove Note" as RemoveNote
+      usecase "Undo Changes" as UndoChanges
+      usecase "Redo Changes" as RedoChanges
+      usecase "Import Notes from File" as ImportNotes
+  }
+  
+  package "To-Do List Application" {
+      usecase "Add Task" as AddTask
+      usecase "Delete Task" as DeleteTask
+      usecase "Sort Tasks by Priority" as SortByPriority
+      usecase "Sort Tasks Alphabetically" as SortAlphabetically
+  }
+}
+
+User --> AddNote
+User --> RemoveNote
+User --> UndoChanges
+User --> RedoChanges
+User --> ImportNotes
+
+User --> AddTask
+User --> DeleteTask
+User --> SortByPriority
+User --> SortAlphabetically
+@enduml

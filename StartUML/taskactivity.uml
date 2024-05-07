@@ -1,0 +1,24 @@
+@startuml
+start
+:Start Application;
+
+:Display Main Window;
+repeat :User chooses an action;
+    -> [Add Task] :Enter task details;
+    :Create task using TaskFactory;
+    :Add task to list;
+    :Sort tasks;
+    :Update display;
+
+    -> [Delete Task] :Select task;
+    :Remove task from list;
+    :Update display;
+
+    -> [Sort Tasks] :Select sorting criteria;
+    :Sort tasks;
+    :Update display;
+repeat while (User wants to continue) is (yes)
+-> (no)
+:End Application;
+stop
+@enduml
