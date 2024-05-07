@@ -61,7 +61,10 @@ public slots:
             TextFileAdapter adapter;
             QStringList notes = adapter.parseFile(filePath);
             for (const QString& note : notes) {
-                model->addNote(note);
+                if (!note.isEmpty()) {
+                    saveState();
+                    model->addNote(note);
+                }
             }
         }
     }
