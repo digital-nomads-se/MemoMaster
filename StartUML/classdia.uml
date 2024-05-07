@@ -1,0 +1,89 @@
+@startuml
+skinparam linetype ortho
+
+class MainWindow {
+    - noteMain: NoteMainWindow
+    - todoMain: TodoMainWindow
+    - noteController: NoteController
+}
+
+class NoteMainWindow {
+    - ui: NoteMainWindowUI
+}
+
+class TodoMainWindow {
+    - ui: TodoMainWindowUI
+    - model: List<Task>
+    - sortStrategy: SortStrategy
+}
+
+class NoteController {
+    - model: NoteModel
+    - view: NoteMainWindow
+    - textFileAdapter: TextFileAdapter
+}
+
+class NoteModel {
+    - notes: QStringList
+    - noteMemento: NoteMemento
+}
+
+class NoteMemento {
+    - state: QStringList
+}
+
+class Task {
+}
+
+class RankedTask {
+}
+
+interface TaskBuilder {
+    + setDescription(desc: String): void
+    + setPriority(prio: Priority): void
+    + getResult(): Task
+}
+
+class TaskBuilderImpl {
+    - description: String
+    - priority: Priority
+}
+
+class SortStrategy {
+    <<abstract>>
+    + sort(tasks: List<Task>): void
+}
+
+class PrioritySort {
+}
+
+class AlphabeticalSort {
+}
+
+class TaskFactory {
+    + createTask(desc: String, prio: Task::Priority): Task
+}
+
+class TextFileAdapter {
+    + parseFile(filePath: String): QStringList
+}
+
+' Relationships
+MainWindow --> NoteController
+MainWindow --> NoteMainWindow
+MainWindow --> TodoMainWindow
+NoteController --> NoteModel
+NoteController --> NoteMainWindow
+NoteController --> TextFileAdapter
+NoteModel --> NoteMemento
+TodoMainWindow --> TaskFactory
+TodoMainWindow --> SortStrategy
+SortStrategy <|-- PrioritySort
+SortStrategy <|-- AlphabeticalSort
+TaskFactory --> Task
+Task <|-- RankedTask
+TodoMainWindow --> Task
+NoteMainWindow ..> NoteController : <<use>>
+TaskBuilder <|.. TaskBuilderImpl
+
+@enduml
