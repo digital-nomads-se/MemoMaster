@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NoteMainWindow</class>
+ <widget class="QMainWindow" name="NoteMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="noteVerticalLayout">
+    <item>
+     <widget class="QListWidget" name="noteListWidget"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="noteAddButton">
+      <property name="text">
+       <string>Add Note</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+        <widget class="QPushButton" name="addNotesFromFileButton">
+            <property name="text">
+                <string>Add Notes from File</string>
+            </property>
+        </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="noteRemoveButton">
+      <property name="text">
+       <string>Remove Selected Note</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="noteUndoButton">
+      <property name="text">
+       <string>Undo</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="noteRedoButton">
+      <property name="text">
+       <string>Redo</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="noteMenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="noteMainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="noteStatusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
