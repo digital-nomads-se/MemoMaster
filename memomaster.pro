@@ -17,7 +17,8 @@ HEADERS += \
     notememento.h \
     task.h \
     taskfactory.h \
-    todomainwindow.h
+    todomainwindow.h \
+    rankedtask.h
 
 SOURCES += \
     main.cpp \
@@ -25,7 +26,8 @@ SOURCES += \
     notemainwindow.cpp \
     task.cpp \
     taskfactory.cpp \
-    todomainwindow.cpp
+    todomainwindow.cpp \
+    rankedtask.cpp
 
 FORMS += \
     mainwindow.ui \

@@ -3,6 +3,7 @@
 #include "taskfactory.h"
 #include <algorithm>
 #include "sortstrategy.h"
+#include "rankedtask.h"
 
 TodoMainWindow::TodoMainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -69,7 +70,8 @@ void TodoMainWindow::updateView()
 {
     ui->listWidget->clear();
     sortStrategy->sort(model);
-    for (Task* task : model) {
-        ui->listWidget->addItem(task->getDescription());
+    for (int i = 0; i < model.size(); i++) {
+        RankedTask* rankedTask = new RankedTask(model[i], i + 1);
+        ui->listWidget->addItem(rankedTask->getDescription());
     }
 }
